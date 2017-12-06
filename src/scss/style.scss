@@ -1,0 +1,91 @@
+$black: #333;
+$grey: #999;
+$scoreColor: #795548;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: $black;
+}
+
+.game-score {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: $scoreColor;
+}
+
+.game-field {
+  position: relative;
+  canvas {
+    display: block;
+    position: relative;
+    margin: auto;
+    border: solid 1px $grey;
+  }
+}
+
+.modal {
+  width: 480px;
+  height: 280px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -240px;
+  margin-top: -140px;
+  padding: 15px;
+  background-color: #E0F2F1;
+  border: solid 1px $grey;
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.5);
+  text-align: center;
+
+  .form-row {
+    padding: 30px 0;
+    &.final-score {
+      font-size: 32px;
+      .mark {
+        font-weight: bold;
+        color: $scoreColor;
+      }
+    }
+  }
+
+  .form-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  input {
+    width: 100px;
+    height: 30px;
+    padding: 6px;
+    margin: 0 15px 0 4px;
+    border: solid 1px $grey;
+    border-radius: 4px;
+    font-size: 20px;
+  }
+
+  .form-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 2px;
+    background-color: #00897B;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #00695C;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}

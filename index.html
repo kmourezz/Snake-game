@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Snake</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <div class="game-field"></div>
+        <div class="game-score"></div>
+      </div>
+    </div>
+
+    <div class="modal hidden">
+      <div class="enter-form hidden">
+        <div class="form-row form-title">Enter the field dimension (from 10 to 100)</div>
+        <div class="form-row">
+          <strong>Horizontal: </strong><input data-id="dim-horz" type="number" min="10" max="100" required>
+          <strong>Vertical: </strong><input data-id="dim-vert" type="number" min="10" max="100" required>
+        </div>
+        <div class="form-row">
+          <button class="form-btn" data-action="default">Set to default</button>
+          <button class="form-btn" data-action="play">Accept and play</button>
+        </div>
+      </div>
+      <div class="message-form hidden">
+        <div class="form-row form-title">Game over</div>
+        <div class="form-row final-score">
+          <span>Your score is </span><span class="mark"></span>
+        </div>
+        <div class="form-row">
+          <button class="form-btn" data-action="close">Close</button>
+          <button class="form-btn" data-action="play">Try again</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="public/bundle.js"></script>
+  </body>
+</html>
